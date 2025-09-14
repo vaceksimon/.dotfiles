@@ -23,3 +23,4 @@ alias exot=exit
 
 export EDITOR=/usr/bin/vim
 
+. "$HOME/.cargo/env"
