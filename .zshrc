@@ -109,6 +109,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 bindkey -v
+bindkey '^R' history-incremental-search-backward
 
 . "$HOME/.cargo/env"
 
