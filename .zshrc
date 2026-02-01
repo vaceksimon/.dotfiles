@@ -108,10 +108,11 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+export PATH="$PATH:$HOME/.cargo/bin"
+
 bindkey -v
 bindkey '^R' history-incremental-search-backward
-
-. "$HOME/.cargo/env"
+bindkey '^S' history-incremental-search-forward
 
 alias dotfiles='/usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
 alias exot='exit'

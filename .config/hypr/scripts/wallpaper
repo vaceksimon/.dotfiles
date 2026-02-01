@@ -17,5 +17,5 @@ for ((i=0; i<n; i++)); do
 	monitor="${monitors[$i]}"
 	wallpaper="${wallpapers[$i]}"
 
-	hyprctl hyprpaper reload "$monitor","$wallpaper"
+	hyprctl hyprpaper wallpaper "$monitor","$wallpaper"
 done
