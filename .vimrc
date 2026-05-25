@@ -11,3 +11,6 @@ se wrap "Wrap lines
 " 1 tab = 2 spaces
 se shiftwidth=2
 se tabstop=2
+
+syntax on
+filetype on

@@ -118,5 +118,17 @@ alias dotfiles='/usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
 alias exot='exit'
 alias ls='lsd'
 alias lt='ls --tree'
+alias gcs='git commit --verbose --signoff'
+
+alias vys='cd ~/Data/muni/semester-4'
+alias bordel='cd ~/Data/Bordel'
+alias data='cd ~/Data'
 
 export EDITOR=/usr/bin/vim
+
+# disable anoying history sharing among terminals
+unsetopt share_history
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
