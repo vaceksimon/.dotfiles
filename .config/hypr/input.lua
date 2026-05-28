@@ -1,30 +1,33 @@
-# https://wiki.hypr.land/Configuring/Variables/#input
-input {
-    kb_layout = us
-    kb_variant =
-    kb_model =
-    kb_options = caps:swapescape
-    kb_rules =
+-- https://wiki.hypr.land/Configuring/Variables/#input
+hl.config({
+	input = {
+    kb_layout = us,
+    -- kb_variant = ,
+    -- kb_model = ,
+    kb_options = "caps:swapescape",
+    -- kb_rules = ,
 
-    follow_mouse = 0
-		mouse_refocus = false
+    follow_mouse = 0,
+		mouse_refocus = false,
 
-    sensitivity = 0 # -1.0 - 1.0, 0 means no modification.
+    sensitivity = 0, -- -1.0 - 1.0, 0 means no modification.
 
-    touchpad {
-        natural_scroll = true
+    touchpad = {
+        natural_scroll = true,
 				disable_while_typing = true
     }
-}
+	},
 
-# https://wiki.hypr.land/Configuring/Variables/#gestures
-gestures {
-    workspace = false
-}
+		-- https://wiki.hypr.land/Configuring/Variables/#gestures
+	--TODOgestures = {
+		--workspace = false
+	--}
 
-# Example per-device config
-# See https://wiki.hypr.land/Configuring/Keywords/#per-device-input-configs for more
-# device {
-#     name = epic-mouse-v1
-#     sensitivity = -0.5
-# }
+		-- Example per-device config
+		-- See https://wiki.hypr.land/Configuring/Keywords/#per-device-input-configs for more
+		-- device {
+		--     name = epic-mouse-v1
+		--     sensitivity = -0.5
+		-- }
+})
+

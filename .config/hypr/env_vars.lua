@@ -1,8 +1,8 @@
-# See https://wiki.hypr.land/Configuring/Environment-variables/
+-- See https://wiki.hypr.land/Configuring/Environment-variables/
 
-env = XCURSOR_SIZE,24
-env = HYPRCURSOR_SIZE,24
+hl.env("XCURSOR_SIZE", "24")
+hl.env("HYPRCURSOR_SIZE", "24")
 
-env = XDG_CURRENT_DESKTOP,Hyprland
-env = XDG_SESSION_TYPE,wayland
-env = XDG_SESSION_DESKTOP,Hyprland
+hl.env("XDG_CURRENT_DESKTOP", "Hyprland")
+hl.env("XDG_SESSION_TYPE", "wayland")
+hl.env("XDG_SESSION_DESKTOP", "Hyprland")

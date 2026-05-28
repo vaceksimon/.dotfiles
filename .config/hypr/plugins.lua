@@ -1,19 +1,38 @@
-plugin {
-    hyprbars {
-				# https://github.com/hyprwm/hyprland-plugins/tree/main/hyprbars
+hl.config({
+    plugin = {
+        hyprbars = {
+						-- https://github.com/hyprwm/hyprland-plugins/tree/main/hyprbars
 
-        # example config
-        bar_height = 20
-
-        # example buttons (R -> L)
-        # hyprbars-button = color, size, on-click
-        hyprbars-button = rgb(ff4040), 10, 󰖭, hyprctl dispatch killactive
-        hyprbars-button = rgb(eeee11), 10, , hyprctl dispatch fullscreen 1
-
-        # cmd to run on double click of the bar
-        on_double_click = hyprctl dispatch fullscreen 1
-
-				windowrule = hyprbars:no_bar true, match:class brave-browser|firefox|code-oss|obsidian|discord
+						-- example config
+            bar_height = 20,
+            on_double_click = "hyprctl dispatch 'hl.dsp.window.fullscreen({ mode = \"fullscreen\", action = \"toggle\" })'"
+        }
     }
-}
+})
+
+-- example buttons (R -> L)
+-- hyprbars-button = color, size, on-click
+hl.plugin.hyprbars.add_button({
+		bg_color = "rgb(ff4040)",
+		fg_color = "rgb(ffffff)",
+		size = 10,
+		icon = "X",
+		action = "hyprctl dispatch 'hl.dsp.window.close()'",
+})
+
+hl.plugin.hyprbars.add_button({
+		bg_color = "rgb(eeee11)",
+		fg_color = "rgb(000000)",
+		size = 10,
+		icon = "_",
+		action = "hyprctl dispatch 'hl.dsp.window.fullscreen({ mode = \"fullscreen\", action = \"toggle\" })'"
+})
+
+hl.window_rule({
+  name = "hyprbar-app-exceptions",
+  match = {
+    class = "brave-browser|firefox|code-oss|obsidian|discord"
+  },
+	['hyprbars:no_bar'] = true
+})
 
