@@ -63,14 +63,14 @@ hl.bind(mainMod .. " + " .. lmb,    hl.dsp.window.drag(),   { mouse = true })
 hl.bind(mainMod .. " + " .. rmb,    hl.dsp.window.resize(), { mouse = true })
 
 -- Volume/Sound
-hl.bind(           "XF86AudioRaiseVolume",  hl.dsp.exec_cmd("~/.config/hypr/scripts/volume --inc"), { long_press = true, locked = true  })
-hl.bind(           "XF86AudioLowerVolume",  hl.dsp.exec_cmd("~/.config/hypr/scripts/volume --dec"), { long_press = true, locked = true  })
-hl.bind(           "XF86AudioMicMute",      hl.dsp.exec_cmd("~/.config/hypr/scripts/volume --toggle-mic"), { long_press = true, locked = true  })
-hl.bind(           "XF86AudioMute",         hl.dsp.exec_cmd("~/.config/hypr/scripts/volume --toggle"), { long_press = true, locked = true  })
+hl.bind(           "XF86AudioRaiseVolume",  hl.dsp.exec_cmd("~/.config/hypr/scripts/volume --inc"), { repeating = true, locked = true })
+hl.bind(           "XF86AudioLowerVolume",  hl.dsp.exec_cmd("~/.config/hypr/scripts/volume --dec"), { repeating = true, locked = true })
+hl.bind(           "XF86AudioMicMute",      hl.dsp.exec_cmd("~/.config/hypr/scripts/volume --toggle-mic"), { repeating = true, locked = true })
+hl.bind(           "XF86AudioMute",         hl.dsp.exec_cmd("~/.config/hypr/scripts/volume --toggle"), { repeating = true, locked = true })
 
 -- Screen brightness
-hl.bind(           "XF86MonBrightnessUp",   hl.dsp.exec_cmd("~/.config/hypr/scripts/backlight --inc"), { long_press = true, locked = true  })
-hl.bind(           "XF86MonBrightnessDown", hl.dsp.exec_cmd("~/.config/hypr/scripts/backlight --dec"), { long_press = true, locked = true  })
+hl.bind(           "XF86MonBrightnessUp",   hl.dsp.exec_cmd("~/.config/hypr/scripts/backlight --inc"), { repeating = true, locked = true })
+hl.bind(           "XF86MonBrightnessDown", hl.dsp.exec_cmd("~/.config/hypr/scripts/backlight --dec"), { repeating = true, locked = true })
 
 -- Requires playerctl
 hl.bind(           "XF86AudioNext",         hl.dsp.exec_cmd("playerctl next"), { locked = true  })
